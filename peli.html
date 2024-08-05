@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <style>
+            .btn-like {
+                border-color: #ff7979;
+                color: #ff7979;
+            }
+            .btn-like-gg {
+                border-color: #ff7979;
+                color: #ff7979;
+            }
+            .movieFav-wrapper {
+                background: white;
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+            .movieFav {
+                position: relative;
+                width: 100px;
+                height: 90px;
+                animation: heartbeat 2s forwards;
+                margin: 0 auto
+            }
+            .movieFav:before,
+            .movieFav:after {
+                position: absolute;
+                content: "";
+                left: 50px;
+                top: 0;
+                width: 50px;
+                height: 80px;
+                background: rgb(246, 71, 71);
+                -moz-border-radius: 50px 50px 0 0;
+                border-radius: 50px 50px 0 0;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transform-origin: 0 100%;
+                -moz-transform-origin: 0 100%;
+                -ms-transform-origin: 0 100%;
+                -o-transform-origin: 0 100%;
+                transform-origin: 0 100%;
+            }
+            .movieFav:after {
+                left: 0;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transform-origin: 100% 100%;
+                -moz-transform-origin: 100% 100%;
+                -ms-transform-origin: 100% 100%;
+                -o-transform-origin: 100% 100%;
+                transform-origin: 100% 100%;
+            }
+            @keyframes heartbeat
+            {
+                0% {
+                    transform: scale(.5);
+                    opacity: 1;
+                }
+                50% {
+                    transform: scale(1.2);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(1.5);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <props-comp></props-comp>
+        </div>
+        <script src="https://kit.fontawesome.com/2cc3729169.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+        <script src="./components/movies/MovieComp.js"></script>    
+        <script src="./components/movies/MovieFav.js"></script>    
+        <script src="./components/PropsComp.js"></script>    
+        <script>
+            let vm = new Vue({
+                el: '#app',
+            })
+        </script>
+    </body>
+</html>

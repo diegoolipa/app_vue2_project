@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+    </head>
+    <body>
+        <div id="app">
+            <hello-world></hello-world>
+            <vue-directives></vue-directives>
+            <saludar-comp></saludar-comp>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+        <script src="./components/HelloWord.js"></script>   
+        <script src="./components/DirectiveHtml.js"></script>
+        <script src="./components/DirectiveShow.js"></script>
+        <script src="./components/DirectiveIf.js"></script>
+        <script src="./components/DirectiveFor.js"></script>
+        <script src="./components/DirectiveOn.js"></script>
+        <script src="./components/DirectiveModel.js"></script>
+        <script src="./components/SlotComponents/buttonComp.js"></script>
+        <script src="./components/DirectiveSlot.js"></script>
+        <script src="./components/DirectiveOnce.js"></script>
+        <script src="./components/VueDirectives.js"></script>    
+        <script src="./components/SaludarComp.js"></script>    
+
+
+        <script>
+            let vm = new Vue({
+                el: '#app',
+            })
+        </script>
+    </body>
+</html>
